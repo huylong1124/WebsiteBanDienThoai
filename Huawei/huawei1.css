@@ -1,0 +1,364 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/*-------- menu -----------*/
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    background-color: whitesmoke; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 999; 
+  }
+.menu{
+    border-radius: 5px;
+    float: left;
+    list-style: none;
+    background-color: whitesmoke;
+    height:30px;
+    margin-top: 20px;
+}
+ul.menu>li>a {
+    display:block;
+    line-height:40px ;
+    text-decoration: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding-left: 25px;
+    color: black;
+}
+ul.menu>li>a:hover {
+    color: red;
+    font-weight:bolder ;
+}
+ul.menu>li{
+    float:left;
+    margin: 0px;
+    position: relative;
+}
+ul.menu>li:hover>.submenu{
+    display:inline-block;
+}
+.logo{
+    float: left;
+}
+
+.hotro {
+    margin-left: 360px;
+    margin-top: 5px;
+}
+
+.submenu{
+    margin:0px;
+    padding: 0px;
+    border-radius: 5px;
+    list-style: none;
+    width: 150px;
+    position: absolute;
+    display:none;
+    background-color: white;
+}
+.submenu>li>a{
+    display:block;
+    line-height: 30px;
+    text-decoration: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding-left: 25px;
+    color:black;
+    --b: 0.1em;   /* the thickness of the line */
+    --c: black; /* the color */
+     color: #0000;
+    padding-block: var(--b);
+    background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+    background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+.submenu>li>a:hover{
+    color: black;
+    display:block;
+    --_p: 100%;
+    --_s: .3s;
+}
+
+.bieutuong{
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    position: relative; 
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    background: greenyellow;
+    border-radius: 50%;
+    font-size: 30px;
+    color: black;
+    transition: .5s;
+}  
+.user>a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: blue;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}     
+.user>a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px blue;
+}
+      
+.user>a:hover {
+    color: blue;
+    text-shadow: 0 0 5px blue;
+}
+
+/* -------slide---------- */
+.anhslide {   
+    background-size: 100%;
+    height: 600px;   
+}
+
+.zed {
+    background-color: white;
+    padding: 12px 10px 20px 20px;
+    border-radius: 6px;
+}
+
+.chuyencanh {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+.slide {
+    width: 19%;
+    background-color: white;
+    padding: 40px 12px 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(236, 244, 87);
+    cursor: pointer;
+}
+
+.slide>a>img {
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.slide:hover>a>img{
+    transform: translateY(-20px);
+}
+
+.text {
+    padding-top: 20px;    
+}
+
+.text>li {
+    margin-bottom: 6px;
+}
+
+.text>li:first-child>a{
+    color: rgb(243, 139, 13);
+    font-size: 16px;
+}
+
+.text>li:first-child>a:hover{
+    color: rgb(75, 242, 66);
+}
+
+.text>li:last-child>i{
+    color: #f9d006;
+}
+
+.text>li:nth-child(2){
+    color: rgb(238, 19, 19);
+}
+
+/* -----------gioi thieu dt----------- */
+.gioithieudt {
+    position: relative;
+    overflow: hidden;
+}
+
+.nutbam {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+}
+
+.nutbam>i {
+    color: rgba(51,51,51,0.4);
+    font-size: 32px;
+    height: 50px;
+    width: 25px;
+    background-color: rgba(253, 242, 242, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nhieuslide {
+    position: relative;
+    height: 430px;
+    transition: all 0.5s ease;
+}
+
+.chuyencanh {
+    position: absolute;
+}
+
+.chuyencanh:nth-child(2) {
+    transform: translateX(100%);
+}
+
+.chuyencanh:nth-child(3) {
+    transform: translateX(200%);
+}
+
+/*---------------section------------*/ 
+.sponsors-section{
+    background-color: rgba(255, 255, 255, 0.97);
+}
+
+.sponsors-showcase{
+    margin-left: 8%;
+}
+
+.sponsors-showcase li{
+    list-style: none;
+    float: left; /* chỉnh nó theo 1 hàng ngang */
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-sponsor{
+    width: 120px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.sponsors-showcase li .logo-sponsor:hover,
+.sponsors-showcase li .logo-sponsor:active{
+   transform: scale(1.2);
+}
+
+figcaption{
+   color: #265077;
+   font-weight: 900;
+   font-size: 120%;
+   cursor: pointer;
+}
+/* quang cao giam gia */
+
+.saleoff {
+    width: 100%;
+    display: flex;
+    height: 322px;
+}
+.saleoff .box-left ,.saleoff .box-right {
+    width: 50%;
+}
+.saleoff .box-left {
+    background:#3e413e;
+    text-align: center;
+    min-height: 322px;
+}
+.saleoff .box-left h1 {
+    padding-top:38px;
+}
+.saleoff .box-left span:nth-child(1) /* chọn phần tử thứ nhất của span */
+{
+    color:#fff;
+    font-size:50px;
+}
+
+.saleoff .box-left span:nth-child(2) /* chọn phần tử thứ 2 của span */
+{
+    color:orange;
+    font-size:128px;
+}
+
+.saleoff .box-right {
+    background-image:url("anhgiamgia.png"); 
+}
+
+.border{
+    margin-left: 110px;
+    width: 1100px;
+    border: 1px solid rgb(0, 255, 38);
+    border-width: 6px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    background:rgb(0,0,0,0.79);
+    height: 322px;
+    margin-top:50px;
+    padding:0px 63px;
+    padding-top:57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .box {
+    width: 250px;
+    color:#fff;
+}
+
+.footer .box .quick-menu {
+    margin-top:40px;
+}
+
+.footer .box .quick-menu .item{
+    margin-bottom:12px;
+}
+.footer .box .quick-menu ,.item a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.item a:hover{ 
+    color: red;
+    text-decoration: underline;    
+}
+
+.box{
+    margin-right: 110px;
+}
+
+.footer .box form input {
+    width: 294px;
+    height: 42px;
+    background:transparent;
+    padding-left:20px;
+    color:#fff;
+    margin-top:30px;
+}
+
+.footer .box form button {
+    background:#362f2f;
+    box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    width: 163px;
+    height: 38px;
+    margin-top:29px;
+    color:#fff;
+}
+
